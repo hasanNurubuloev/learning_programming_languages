@@ -4,7 +4,6 @@ import 'package:learning_programming_languages/injection/injection.dart';
 
 void main() async {
   await configureDependencies();
-
   runApp(const MyApp());
 }
 
