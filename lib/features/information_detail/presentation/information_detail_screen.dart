@@ -1,5 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:learning_programming_languages/gen/fonts.gen.dart';
 
 @RoutePage()
 class InformationDetailScreen extends StatefulWidget {
@@ -17,24 +19,23 @@ class _InformationDetailScreenState extends State<InformationDetailScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        scrolledUnderElevation: 0.0,
-        backgroundColor: Colors.white,
-        title: Text(
-          widget.title,
-          style: const TextStyle(fontSize: 16),
+        backgroundColor: const Color(0xFFF5F2F2),
+        title: const Text(
+          'Flutter',
+          style: TextStyle(fontFamily: FontFamily.inter),
         ),
-
-        actions: const [
-          Padding(
-              padding: EdgeInsets.only(right: 16.0),
-              child: Row(children: [
-                Icon(Icons.language),
-                SizedBox(
-                  width: 4,
-                ),
-                Text('RU')
-              ]))
-        ],
+        centerTitle: true,
+        leading: GestureDetector(
+          onTap: (){
+            context.router.maybePop();
+          },
+          child: SvgPicture.asset(
+            'assets/images/arrow_left.svg',
+            fit: BoxFit.scaleDown,
+          ),
+        ),
+        actions: [IconButton(onPressed: () {
+        }, icon: const Icon(Icons.menu))],
       ),
       body: SingleChildScrollView(
         child: Padding(

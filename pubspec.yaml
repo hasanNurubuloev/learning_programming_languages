@@ -86,8 +86,8 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+   - assets/images/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -101,11 +101,40 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  fonts:
+   - family: Inter
+     fonts:
+       - asset: assets/fonts/Inter_18pt-Black.ttf
+       - asset: assets/fonts/Inter_18pt-Bold.ttf
+       - asset: assets/fonts/Inter_18pt-ExtraBold.ttf
+       - asset: assets/fonts/Inter_18pt-ExtraLight.ttf
+       - asset: assets/fonts/Inter_18pt-Italic.ttf
+       - asset: assets/fonts/Inter_18pt-Light.ttf
+       - asset: assets/fonts/Inter_18pt-Medium.ttf
+       - asset: assets/fonts/Inter_18pt-Regular.ttf
+       - asset: assets/fonts/Inter_18pt-SemiBold.ttf
+       - asset: assets/fonts/Inter_18pt-Thin.ttf
+       - asset: assets/fonts/Inter_24pt-Black.ttf
+       - asset: assets/fonts/Inter_24pt-Bold.ttf
+       - asset: assets/fonts/Inter_24pt-ExtraBold.ttf
+       - asset: assets/fonts/Inter_24pt-ExtraLight.ttf
+       - asset: assets/fonts/Inter_24pt-Italic.ttf
+       - asset: assets/fonts/Inter_24pt-Light.ttf
+       - asset: assets/fonts/Inter_24pt-Medium.ttf
+       - asset: assets/fonts/Inter_24pt-Regular.ttf
+       - asset: assets/fonts/Inter_24pt-SemiBold.ttf
+       - asset: assets/fonts/Inter_24pt-Thin.ttf
+       - asset: assets/fonts/Inter_28pt-Black.ttf
+       - asset: assets/fonts/Inter_28pt-Bold.ttf
+       - asset: assets/fonts/Inter_28pt-ExtraBold.ttf
+       - asset: assets/fonts/Inter_28pt-ExtraLight.ttf
+       - asset: assets/fonts/Inter_28pt-Italic.ttf
+       - asset: assets/fonts/Inter_28pt-Light.ttf
+       - asset: assets/fonts/Inter_28pt-Medium.ttf
+       - asset: assets/fonts/Inter_28pt-Regular.ttf
+       - asset: assets/fonts/Inter_28pt-SemiBold.ttf
+       - asset: assets/fonts/Inter_28pt-Thin.ttf
+
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:
