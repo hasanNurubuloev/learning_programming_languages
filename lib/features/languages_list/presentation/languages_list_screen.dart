@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:learning_programming_languages/core/app/router/app_router.gr.dart';
 import 'package:learning_programming_languages/core/extensions/insert_between.dart';
 import 'package:learning_programming_languages/features/languages_list/domain/entity/languages_entity.dart';
+import 'package:learning_programming_languages/features/menu/presentation/menu_screen.dart';
 import 'package:learning_programming_languages/gen/fonts.gen.dart';
 
 @RoutePage()
@@ -20,35 +21,39 @@ class LanguagesListScreen extends StatelessWidget {
           'Dev Manual',
           style: TextStyle(fontFamily: FontFamily.inter),
         ),
-        actions: [IconButton(onPressed: () {
-          print('ololo list');
-        }, icon: const Icon(Icons.menu))],
+        actions: [
+          IconButton(
+              onPressed: () {
+                context.router.pushWidget(const MenuScreen());
+              },
+              icon: const Icon(Icons.menu))
+        ],
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 20),
+        padding: const EdgeInsets.all(20),
         child: ListView.builder(
-          itemCount: listLanguages.length,
+          itemCount: listLanguages().length,
           itemBuilder: (context, index) {
             return GestureDetector(
               onTap: () {
-                context.router.push(DetailLanguageRoute(languagesEntity: listLanguages[0]));
+                context.router.push(DetailLanguageRoute(languagesEntity: listLanguages()[0]));
               },
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                    alignment: Alignment.center,
+                      alignment: Alignment.center,
                       decoration: BoxDecoration(borderRadius: BorderRadius.circular(24)),
-                      child: SvgPicture.asset(listLanguages[index].image)),
+                      child: SvgPicture.asset(listLanguages()[index].image, fit: BoxFit.fill,),),
                   Text(
-                    listLanguages[index].title,
+                    listLanguages()[index].title,
                     style: const TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 20,
                     ),
                   ),
                   Text(
-                    listLanguages[index].description,
+                    listLanguages()[index].description,
                     style: const TextStyle(
                       fontWeight: FontWeight.normal,
                       fontSize: 20,

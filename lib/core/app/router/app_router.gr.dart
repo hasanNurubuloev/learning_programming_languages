@@ -8,8 +8,8 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i5;
-import 'package:flutter/material.dart' as _i7;
+import 'package:auto_route/auto_route.dart' as _i6;
+import 'package:flutter/material.dart' as _i8;
 import 'package:learning_programming_languages/features/detail/presentation/detail_language_screen.dart'
     as _i1;
 import 'package:learning_programming_languages/features/home/presentation/home_screen.dart'
@@ -17,17 +17,19 @@ import 'package:learning_programming_languages/features/home/presentation/home_s
 import 'package:learning_programming_languages/features/information_detail/presentation/information_detail_screen.dart'
     as _i3;
 import 'package:learning_programming_languages/features/languages_list/domain/entity/languages_entity.dart'
-    as _i6;
+    as _i7;
 import 'package:learning_programming_languages/features/languages_list/presentation/languages_list_screen.dart'
     as _i4;
+import 'package:learning_programming_languages/features/menu/presentation/menu_screen.dart'
+    as _i5;
 
 /// generated route for
 /// [_i1.DetailLanguageScreen]
-class DetailLanguageRoute extends _i5.PageRouteInfo<DetailLanguageRouteArgs> {
+class DetailLanguageRoute extends _i6.PageRouteInfo<DetailLanguageRouteArgs> {
   DetailLanguageRoute({
-    required _i6.LanguagesEntity languagesEntity,
-    _i7.Key? key,
-    List<_i5.PageRouteInfo>? children,
+    required _i7.LanguagesEntity languagesEntity,
+    _i8.Key? key,
+    List<_i6.PageRouteInfo>? children,
   }) : super(
           DetailLanguageRoute.name,
           args: DetailLanguageRouteArgs(
@@ -39,7 +41,7 @@ class DetailLanguageRoute extends _i5.PageRouteInfo<DetailLanguageRouteArgs> {
 
   static const String name = 'DetailLanguageRoute';
 
-  static _i5.PageInfo page = _i5.PageInfo(
+  static _i6.PageInfo page = _i6.PageInfo(
     name,
     builder: (data) {
       final args = data.argsAs<DetailLanguageRouteArgs>();
@@ -57,9 +59,9 @@ class DetailLanguageRouteArgs {
     this.key,
   });
 
-  final _i6.LanguagesEntity languagesEntity;
+  final _i7.LanguagesEntity languagesEntity;
 
-  final _i7.Key? key;
+  final _i8.Key? key;
 
   @override
   String toString() {
@@ -69,8 +71,8 @@ class DetailLanguageRouteArgs {
 
 /// generated route for
 /// [_i2.HomeScreen]
-class HomeRoute extends _i5.PageRouteInfo<void> {
-  const HomeRoute({List<_i5.PageRouteInfo>? children})
+class HomeRoute extends _i6.PageRouteInfo<void> {
+  const HomeRoute({List<_i6.PageRouteInfo>? children})
       : super(
           HomeRoute.name,
           initialChildren: children,
@@ -78,7 +80,7 @@ class HomeRoute extends _i5.PageRouteInfo<void> {
 
   static const String name = 'HomeRoute';
 
-  static _i5.PageInfo page = _i5.PageInfo(
+  static _i6.PageInfo page = _i6.PageInfo(
     name,
     builder: (data) {
       return const _i2.HomeScreen();
@@ -89,12 +91,12 @@ class HomeRoute extends _i5.PageRouteInfo<void> {
 /// generated route for
 /// [_i3.InformationDetailScreen]
 class InformationDetailRoute
-    extends _i5.PageRouteInfo<InformationDetailRouteArgs> {
+    extends _i6.PageRouteInfo<InformationDetailRouteArgs> {
   InformationDetailRoute({
     required String title,
     required String information,
-    _i7.Key? key,
-    List<_i5.PageRouteInfo>? children,
+    _i8.Key? key,
+    List<_i6.PageRouteInfo>? children,
   }) : super(
           InformationDetailRoute.name,
           args: InformationDetailRouteArgs(
@@ -107,7 +109,7 @@ class InformationDetailRoute
 
   static const String name = 'InformationDetailRoute';
 
-  static _i5.PageInfo page = _i5.PageInfo(
+  static _i6.PageInfo page = _i6.PageInfo(
     name,
     builder: (data) {
       final args = data.argsAs<InformationDetailRouteArgs>();
@@ -131,7 +133,7 @@ class InformationDetailRouteArgs {
 
   final String information;
 
-  final _i7.Key? key;
+  final _i8.Key? key;
 
   @override
   String toString() {
@@ -141,8 +143,8 @@ class InformationDetailRouteArgs {
 
 /// generated route for
 /// [_i4.LanguagesListScreen]
-class LanguagesListRoute extends _i5.PageRouteInfo<void> {
-  const LanguagesListRoute({List<_i5.PageRouteInfo>? children})
+class LanguagesListRoute extends _i6.PageRouteInfo<void> {
+  const LanguagesListRoute({List<_i6.PageRouteInfo>? children})
       : super(
           LanguagesListRoute.name,
           initialChildren: children,
@@ -150,10 +152,29 @@ class LanguagesListRoute extends _i5.PageRouteInfo<void> {
 
   static const String name = 'LanguagesListRoute';
 
-  static _i5.PageInfo page = _i5.PageInfo(
+  static _i6.PageInfo page = _i6.PageInfo(
     name,
     builder: (data) {
       return const _i4.LanguagesListScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [_i5.MenuScreen]
+class MenuRoute extends _i6.PageRouteInfo<void> {
+  const MenuRoute({List<_i6.PageRouteInfo>? children})
+      : super(
+          MenuRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'MenuRoute';
+
+  static _i6.PageInfo page = _i6.PageInfo(
+    name,
+    builder: (data) {
+      return const _i5.MenuScreen();
     },
   );
 }

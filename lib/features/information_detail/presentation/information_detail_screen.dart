@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:learning_programming_languages/features/menu/presentation/menu_screen.dart';
 import 'package:learning_programming_languages/gen/fonts.gen.dart';
 
 @RoutePage()
@@ -26,7 +27,7 @@ class _InformationDetailScreenState extends State<InformationDetailScreen> {
         ),
         centerTitle: true,
         leading: GestureDetector(
-          onTap: (){
+          onTap: () {
             context.router.maybePop();
           },
           child: SvgPicture.asset(
@@ -34,8 +35,14 @@ class _InformationDetailScreenState extends State<InformationDetailScreen> {
             fit: BoxFit.scaleDown,
           ),
         ),
-        actions: [IconButton(onPressed: () {
-        }, icon: const Icon(Icons.menu))],
+        actions: [
+          IconButton(
+            onPressed: () {
+              context.router.pushWidget(const MenuScreen());
+            },
+            icon: const Icon(Icons.menu),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Padding(

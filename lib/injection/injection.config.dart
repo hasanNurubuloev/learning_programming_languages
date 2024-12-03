@@ -12,6 +12,8 @@ import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:learning_programming_languages/core/app/router/app_router.dart'
     as _i239;
+import 'package:learning_programming_languages/features/menu/domain/bloc/menu_bloc.dart'
+    as _i586;
 
 extension GetItInjectableX on _i174.GetIt {
 // initializes the registration of main-scope dependencies inside of GetIt
@@ -24,6 +26,7 @@ extension GetItInjectableX on _i174.GetIt {
       environment,
       environmentFilter,
     );
+    gh.factory<_i586.MenuBloc>(() => _i586.MenuBloc());
     gh.singleton<_i239.AppRouter>(() => _i239.AppRouter());
     return this;
   }
